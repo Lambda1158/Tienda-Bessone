@@ -1,21 +1,27 @@
 import React from 'react'
+import CartWidget from "../CartWidget/CartWidget"
 import "./Navbar.css"
 
 function Navbar() {
     return (
         <nav className="agrandarFuente">
-            <ul class="nav justify-content-center navbar-dark bg-dark">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Inicio</a>
+            <h1 className="text-center">Tienda Arcadia</h1>
+            <ul className="nav justify-content-center navbar-dark bg-dark">
+
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Inicio</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Productos</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Productos</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre Nosotros</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Sobre Nosotros</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contacto</a>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Contacto</a>
+                </li>
+                <li className="nav-item">
+                <a className="nav-link" href="#"><CartWidget/>0</a>
                 </li>
             </ul>
         </nav>
