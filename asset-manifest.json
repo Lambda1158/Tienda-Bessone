@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Tienda-Bessone/static/css/main.86a7b6a8.chunk.css",
-    "main.js": "/Tienda-Bessone/static/js/main.ef884259.chunk.js",
-    "main.js.map": "/Tienda-Bessone/static/js/main.ef884259.chunk.js.map",
+    "main.js": "/Tienda-Bessone/static/js/main.b23ee04a.chunk.js",
+    "main.js.map": "/Tienda-Bessone/static/js/main.b23ee04a.chunk.js.map",
     "runtime-main.js": "/Tienda-Bessone/static/js/runtime-main.ef0d5866.js",
     "runtime-main.js.map": "/Tienda-Bessone/static/js/runtime-main.ef0d5866.js.map",
     "static/css/2.f2512455.chunk.css": "/Tienda-Bessone/static/css/2.f2512455.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.f2512455.chunk.css",
     "static/js/2.94cc801c.chunk.js",
     "static/css/main.86a7b6a8.chunk.css",
-    "static/js/main.ef884259.chunk.js"
+    "static/js/main.b23ee04a.chunk.js"
   ]
 }
