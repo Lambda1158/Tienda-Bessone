@@ -1,0 +1,11 @@
+.size-card{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.prueba{
+    max-width: 150px;
+    max-height: 150px;
+}
