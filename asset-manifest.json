@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Tienda-Bessone/static/css/main.86a7b6a8.chunk.css",
-    "main.js": "/Tienda-Bessone/static/js/main.12b6a404.chunk.js",
-    "main.js.map": "/Tienda-Bessone/static/js/main.12b6a404.chunk.js.map",
-    "runtime-main.js": "/Tienda-Bessone/static/js/runtime-main.5471a230.js",
-    "runtime-main.js.map": "/Tienda-Bessone/static/js/runtime-main.5471a230.js.map",
+    "main.css": "/Tienda-Bessone/static/css/main.91a31ba9.chunk.css",
+    "main.js": "/Tienda-Bessone/static/js/main.deceac14.chunk.js",
+    "main.js.map": "/Tienda-Bessone/static/js/main.deceac14.chunk.js.map",
+    "runtime-main.js": "/Tienda-Bessone/static/js/runtime-main.be0c2b72.js",
+    "runtime-main.js.map": "/Tienda-Bessone/static/js/runtime-main.be0c2b72.js.map",
     "static/css/2.f2512455.chunk.css": "/Tienda-Bessone/static/css/2.f2512455.chunk.css",
-    "static/js/2.dd15bb34.chunk.js": "/Tienda-Bessone/static/js/2.dd15bb34.chunk.js",
-    "static/js/2.dd15bb34.chunk.js.map": "/Tienda-Bessone/static/js/2.dd15bb34.chunk.js.map",
-    "static/js/3.09a05f63.chunk.js": "/Tienda-Bessone/static/js/3.09a05f63.chunk.js",
-    "static/js/3.09a05f63.chunk.js.map": "/Tienda-Bessone/static/js/3.09a05f63.chunk.js.map",
+    "static/js/2.50db255f.chunk.js": "/Tienda-Bessone/static/js/2.50db255f.chunk.js",
+    "static/js/2.50db255f.chunk.js.map": "/Tienda-Bessone/static/js/2.50db255f.chunk.js.map",
+    "static/js/3.56e2ad1c.chunk.js": "/Tienda-Bessone/static/js/3.56e2ad1c.chunk.js",
+    "static/js/3.56e2ad1c.chunk.js.map": "/Tienda-Bessone/static/js/3.56e2ad1c.chunk.js.map",
     "index.html": "/Tienda-Bessone/index.html",
     "static/css/2.f2512455.chunk.css.map": "/Tienda-Bessone/static/css/2.f2512455.chunk.css.map",
-    "static/css/main.86a7b6a8.chunk.css.map": "/Tienda-Bessone/static/css/main.86a7b6a8.chunk.css.map",
-    "static/js/2.dd15bb34.chunk.js.LICENSE.txt": "/Tienda-Bessone/static/js/2.dd15bb34.chunk.js.LICENSE.txt"
+    "static/css/main.91a31ba9.chunk.css.map": "/Tienda-Bessone/static/css/main.91a31ba9.chunk.css.map",
+    "static/js/2.50db255f.chunk.js.LICENSE.txt": "/Tienda-Bessone/static/js/2.50db255f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5471a230.js",
+    "static/js/runtime-main.be0c2b72.js",
     "static/css/2.f2512455.chunk.css",
-    "static/js/2.dd15bb34.chunk.js",
-    "static/css/main.86a7b6a8.chunk.css",
-    "static/js/main.12b6a404.chunk.js"
+    "static/js/2.50db255f.chunk.js",
+    "static/css/main.91a31ba9.chunk.css",
+    "static/js/main.deceac14.chunk.js"
   ]
 }
