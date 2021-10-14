@@ -4,9 +4,9 @@ import ItemList from '../ItemList/ItemList'
 
 const ItemListContainer = ( {greetings} ) => {
     return (
-        <div className="container fondoContainer">
+        <div className="fondoContainer container">
             <h2 className="text-center"> {greetings} Nuestras Pociones! </h2>
-            <ItemList className="pepe"/>
+                <ItemList/>
         </div>
     )
 }
