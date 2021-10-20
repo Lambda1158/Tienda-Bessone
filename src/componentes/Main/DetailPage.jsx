@@ -3,11 +3,11 @@ import { useParams } from 'react-router'
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 const DetailPage = () => {
-    let {id} = useParams();
+    let {nombre} = useParams();
 
     return (
         <div>
-            <ItemDetailContainer id={id}/>
+            <ItemDetailContainer nombre={nombre}/>
             <hr/>
         </div>
     )

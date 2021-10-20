@@ -3,11 +3,11 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Navbar from "./componentes/Navbar/Navbar";
 import Main from "./componentes/Main/Main";
-import DetailPage from './componentes/Main/DetailPage';
 import Footer from './componentes/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import DetailPage from './componentes/Main/DetailPage';
+
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <ItemListContainer/>        
         </Route>
 
-        <Route exact path="/productos/:id">
+        <Route exact path="/productos/:nombre">
           <DetailPage/>
         </Route>
 
