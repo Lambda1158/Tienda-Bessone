@@ -7,33 +7,40 @@ import Footer from './componentes/Footer/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import DetailPage from './componentes/Main/DetailPage';
-
+import CartContextProvider from './context/cartContext';
+import Cart from './componentes/Cart/Cart';
 
 function App() {
   return (
-    <Router>
+  <CartContextProvider>
+        <Router>
 
-      <Navbar/>
+          <Navbar/>
 
-      <Switch>
+          <Switch>
 
-        <Route exact path="/productos">
-          <ItemListContainer/>        
-        </Route>
+            <Route exact path="/productos">
+              <ItemListContainer/>        
+            </Route>
 
-        <Route exact path="/productos/:nombre">
-          <DetailPage/>
-        </Route>
+            <Route exact path="/productos/:nombre">
+              <DetailPage/>
+            </Route>
 
-        <Route path="/">
-            <Main/>
-          </Route>
+            <Route exact path="/cart">
+              <Cart/>
+            </Route>
 
-      </Switch>
+            <Route path="/">
+                <Main/>
+              </Route>
 
-      <Footer/>
+          </Switch>
 
-    </Router>
+          <Footer/>
+
+        </Router>
+    </CartContextProvider>
   );
 }
 

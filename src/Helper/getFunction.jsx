@@ -3,7 +3,7 @@ import { ListaDeProductos } from "../data/data";
     const getProductos = new Promise((resolve, reject) => {
         setTimeout(() =>{
             resolve(ListaDeProductos);
-        }, 2000);
+        }, 500);
     });
 
 const getById = (id, array) => array.find((el) => el.id === id);

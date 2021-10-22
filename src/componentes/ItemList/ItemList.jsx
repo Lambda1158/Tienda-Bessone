@@ -10,7 +10,7 @@ const ItemList = () => {
     const getProductos = new Promise((resolve, reject) => {
         setTimeout(() =>{
             resolve(ListaDeProductos);
-        }, 2000);
+        }, 500);
     });
 
     const getProductsFromDB = async () => {

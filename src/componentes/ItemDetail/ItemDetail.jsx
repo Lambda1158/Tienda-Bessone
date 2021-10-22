@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useCartContext } from '../../context/cartContext';
+
 
 const ItemDetail = ({item}) => {
-  const onAdd = (clicks) => {
-    alert(`Agregaste ${clicks} ${item.nombre} al carrito al carrito`);
+    const {cartList, agregarItem} = useCartContext()
+    console.log(cartList);
+      
+    const onAdd = (clicks) => {
+    console.log(clicks);
+    agregarItem({item:item, cantidad:clicks});
+      alert(`Agregaste ${clicks} ${item.nombre} al carrito`);
 };
 
 

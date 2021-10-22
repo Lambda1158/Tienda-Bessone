@@ -12,12 +12,13 @@ const Item = ({id, nombre, precio, stock, imagen}) => {
     return (      
             <div className="card text-center" style={{width:"18rem"}}>                    
                 <img className="card-img-top" src={imagen} alt="producto"/>
-                <div className="card-body">
-                    <Link to={`/productos/${nombre}`}>
-                    <h5 className="card-title">{nombre}</h5>
-                    </Link>
+                <div className="card-body">                    
+                    <h5 className="card-title">{nombre}</h5>                    
                     <p className="card-text">${precio}</p>
-                    <ItemCount stock={stock} onAdd={onAdd} initial={1}/>
+                    <Link to={`/productos/${nombre}`}>
+                    <button className="btn btn-success">+ Info</button>
+                    </Link>
+                {/* <ItemCount stock={stock} onAdd={onAdd} initial={1}/> */}
                 </div>                    
             </div>   
     );

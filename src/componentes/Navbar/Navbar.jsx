@@ -22,11 +22,13 @@ function Navbar() {
                 <li className="nav-item">
                     <a className="nav-link" href="#">Sobre Nosotros</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Contacto</a>
+                <li className="nav-item">                
+                    <a className="nav-link" href="#">Contacto</a>                    
                 </li>
                 <li className="nav-item">
+                    <Link to={`/cart`}>
                 <a className="nav-link" href="#"><CartWidget/>0</a>
+                </Link>
                 </li>
             </ul>
         </nav>
