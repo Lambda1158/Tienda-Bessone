@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { useCartContext } from '../../context/cartContext';
+import { Link } from 'react-router-dom';
 
 
 const ItemDetail = ({item}) => {
     const {cartList, agregarItem} = useCartContext()
-    console.log(cartList);
       
     const onAdd = (clicks) => {
     console.log(clicks);
-    agregarItem({item:item, cantidad:clicks});
-      alert(`Agregaste ${clicks} ${item.nombre} al carrito`);
+      setShow(false);
 };
-
 
   const [show, setShow] = useState(true)
 
@@ -24,9 +22,9 @@ const ItemDetail = ({item}) => {
               <p className="card-text">${item.precio}</p>
               <p className="card-text">{item.descripcion}</p>
 
-              {show?<ItemCount stock={item.stock} onAdd={onAdd} initial={1}/> :null}
-              <button className="btn btn-warning botones p-3 m-3" onClick={()=>setShow(!show)}>Finalizar Compra</button>
-              
+              {show? 
+              ( <ItemCount mostrar={show} setMostrar={setShow} item={item} onAdd={onAdd} initial={1}/> )
+              : ( <Link to={`/cart`}> <button className="btn btn-warning botones p-3 m-3" onClick={()=>setShow(!show)}>Finalizar Compra</button></Link> )}              
             </div>                    
       </div> 
     );
