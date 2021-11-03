@@ -21,7 +21,11 @@ function CartContextProvider({children}){
         setCartList ([...newCart, {item: newItem, quantity:qty}]);
         setMostrar(!mostrar);
         };
-        console.log(cartList);
+
+    const removerItem = (itemId) =>{
+        let filtrarCarrito = cartList.filter((item) => item.item.id !== itemId);
+            setCartList(filtrarCarrito);
+        };
 
     function vaciarCarrito(){
         setCartList([])
@@ -32,6 +36,7 @@ function CartContextProvider({children}){
         <CartContext.Provider value= {{
             cartList,
             agregarItem,
+            removerItem,
             vaciarCarrito,
         }}>
             {children}

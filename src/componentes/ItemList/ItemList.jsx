@@ -1,31 +1,37 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import { ListaDeProductos } from '../../data/data.js'
 import Item from '../Item/Item';
+import { getFirestore } from '../../data/getFirebase.js';
 
 const ItemList = () => {
 
-    const [productos, setProductos] = useState([]);
+    const [productos, setProductos] = useState({});
 
-    const getProductos = new Promise((resolve, reject) => {
-        setTimeout(() =>{
-            resolve(ListaDeProductos);
-        }, 500);
-    });
+    // const getProductos = new Promise((resolve, reject) => {
+    //    setTimeout(() =>{
+    //        resolve(ListaDeProductos);
+    //    }, 500);
+    //});
 
-    const getProductsFromDB = async () => {
-        try{
-            const result = await getProductos;
-            setProductos(result);
-        } catch (error) {
-            alert("Algo fallo, intentelo de nuevo");
-        }
-    };
+    //const getProductsFromDB = async () => {
+    //    try{
+    //        const result = await getProductos;
+    //        setProductos(result);
+    //    } catch (error) {
+    //        alert("Algo fallo, intentelo de nuevo");
+    //    }
+    //};
 
     useEffect(() =>{
-        getProductsFromDB();
-    }, []);
-
+        try{
+        const db = getFirestore()
+        db.collection('productos').get()
+        .then(resp => setProductos(resp.docs.map(it => ({id: it.id, ...it.data()}))));}
+        catch (error) {
+        alert("Algo fallo, intentelo de nuevo");
+    }}
+    , []);
+    
     return (
         <div>
             {

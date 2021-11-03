@@ -10,7 +10,7 @@ const Item = ({id, nombre, precio, stock, imagen}) => {
     };
     
     return (      
-            <div className="card text-center" style={{width:"18rem"}}>                    
+            <div className="card text-center m-2" style={{width:"18rem"}}>                    
                 <img className="card-img-top" src={imagen} alt="producto"/>
                 <div className="card-body">                    
                     <h5 className="card-title">{nombre}</h5>                    
