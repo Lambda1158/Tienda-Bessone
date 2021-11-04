@@ -8,11 +8,11 @@ function CartContextProvider({children}){
     const [cartList, setCartList] = useState([])
 
     const agregarItem=(newItem, newQuantity, mostrar, setMostrar)=>{
-        const evitarDuplicado = cartList.find((e) => e.item.id === newItem.id);
+        const evitarDuplicado = cartList.find((item) => item.item.id === newItem.id);
         let newCart;
         let qty;
         if(evitarDuplicado) {
-            newCart = cartList.filter((e) => e.item.id !== newItem.id);
+            newCart = cartList.filter((item) => item.item.id !== newItem.id);
             qty = evitarDuplicado.quantity + newQuantity
         } else {
             newCart = [...cartList];

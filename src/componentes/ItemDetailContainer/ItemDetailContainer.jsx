@@ -14,12 +14,12 @@ const ItemDetailContainer = ({nombre}) => {
 useEffect(() =>{
     const db = getFirestore()
     db.collection('productos').get()
-    .then(resp => setProductos(resp.docs.map( item => ({nombre: item.nombre, ...item.data()}))))
+    .then(resp => setProductos(resp.docs.map( item => ({nombre: item.nombre, ...item.data()}))));
 }, [productos]);
 //     getProductos.then(res => setProductos(res));    
 // }, [productos]);
 
-    productoEncontrado = productos.find( item => item.nombre === nombre );
+   productoEncontrado = productos.find( item => item.nombre === nombre );
 
     return (
         <div className="container text-center">

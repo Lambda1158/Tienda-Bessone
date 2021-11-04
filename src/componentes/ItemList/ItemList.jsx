@@ -23,14 +23,14 @@ const ItemList = () => {
     //};
 
     useEffect(() =>{
-        try{
-        const db = getFirestore()
-        db.collection('productos').get()
-        .then(resp => setProductos(resp.docs.map(it => ({id: it.id, ...it.data()}))));}
-        catch (error) {
-        alert("Algo fallo, intentelo de nuevo");
-    }}
-    , []);
+  //    try{
+  //    const db = getFirestore()
+  //    db.collection('productos').get()
+  //    .then(resp => setProductos(resp.docs.map(e => ({id: e.id, ...e.data()}))));}
+  //    catch (error) {
+  //    alert("Algo fallo, intentelo de nuevo");
+  //}}
+  //, []);
     
     return (
         <div>
