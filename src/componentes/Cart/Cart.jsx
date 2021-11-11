@@ -3,7 +3,7 @@ import { useCartContext } from '../../context/cartContext'
 import { Link } from 'react-router-dom'
 
 const Cart = () => {
-    const {cartList, vaciarCarrito, removerItem} = useCartContext()
+    const {cartList, vaciarCarrito, removerItem, crearOrdenDePedido} = useCartContext()
     console.log(cartList);
     let i = 0
     return (
@@ -31,7 +31,8 @@ const Cart = () => {
                 </tbody>)}                
         </table>        
                 <h1>TOTAL:</h1>
-                <button className="btn btn-warning botones" onClick={()=>vaciarCarrito()}>Vaciar Bolsita</button>        
+                <button className="btn btn-warning botones" onClick={()=>vaciarCarrito()}>Vaciar Bolsita</button>
+                {cartList.length !== 0 && <button onClick={()=> crearOrdenDePedido(cartList)}>Terminar compra</button>}    
         </div>
     );
                 };

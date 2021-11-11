@@ -5,33 +5,19 @@ import { getFirestore } from '../../data/getFirebase.js';
 
 const ItemList = () => {
 
-    const [productos, setProductos] = useState({});
-
-    // const getProductos = new Promise((resolve, reject) => {
-    //    setTimeout(() =>{
-    //        resolve(ListaDeProductos);
-    //    }, 500);
-    //});
-
-    //const getProductsFromDB = async () => {
-    //    try{
-    //        const result = await getProductos;
-    //        setProductos(result);
-    //    } catch (error) {
-    //        alert("Algo fallo, intentelo de nuevo");
-    //    }
-    //};
+    const [productos, setProductos] = useState([]);
 
     useEffect(() =>{
-  //    try{
-  //    const db = getFirestore()
-  //    db.collection('productos').get()
-  //    .then(resp => setProductos(resp.docs.map(e => ({id: e.id, ...e.data()}))));}
-  //    catch (error) {
-  //    alert("Algo fallo, intentelo de nuevo");
-  //}}
-  //, []);
-    
+        try{
+        const db = getFirestore()
+        db.collection('productos').get()
+        .then(resp => setProductos(resp.docs.map(e => ({id: e.id, ...e.data()}))));}
+        catch (error) {
+        alert("Algo fallo, intentelo de nuevo");
+  }
+}, []);
+ console.log(productos)    
+
     return (
         <div>
             {
