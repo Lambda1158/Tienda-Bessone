@@ -11,11 +11,14 @@ function CartContextProvider({children}){
     const [cartList, setCartList] = useState([])
 
     const agregarItem=(newItem, newQuantity, mostrar, setMostrar)=>{
-        const evitarDuplicado = cartList.find((item) => item.item.id === newItem.id);
+        const evitarDuplicado = cartList.find((item) => {
+            
+            return item.item.nombre === newItem.nombre});
+       
         let newCart;
         let qty;
         if(evitarDuplicado) {
-            newCart = cartList.filter((item) => item.item.id !== newItem.id);
+            newCart = cartList.filter((item) => item.item.nombre !== newItem.nombre);
             qty = evitarDuplicado.quantity + newQuantity
         } else {
             newCart = [...cartList];
@@ -26,7 +29,8 @@ function CartContextProvider({children}){
         };
 
     const removerItem = (itemId) =>{
-        let filtrarCarrito = cartList.filter((item) => item.item.id !== itemId);
+        
+        let filtrarCarrito = cartList.filter((item) => item.item.nombre !== itemId);
             setCartList(filtrarCarrito);
         };
 
@@ -46,19 +50,19 @@ function CartContextProvider({children}){
         }
 
         const itemEnLaOrden = (orden) => {
-            cartList.map(item => items.push({
+            cartList.map(item => orden.push({
                 id: item.item.id,
                 name: item.item.nombre,
                 price: item.item.precio,
             }))
-            return items
+            return orden
         }
 
         const precio = () => {cartList.map(item => {
             precioTotal += item.item.precio * item.cantidad
             return precioTotal
         })}
-
+        
         const db = getFirestore();
         const dbOrders = db.collection('ordenes');
         precio()
@@ -75,7 +79,7 @@ function CartContextProvider({children}){
         setCartList()
     }
     
-    console.log(cartList);    
+      
     return(
         <CartContext.Provider value= {{
             cartList,

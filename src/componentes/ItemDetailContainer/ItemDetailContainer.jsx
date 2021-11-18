@@ -12,7 +12,7 @@ useEffect(() =>{
   db.collection('productos').get()
   .then(resp => setProductos(resp.docs.map( item => ({nombre: item.nombre, ...item.data()}))));
 }, []);
-
+  
    productoEncontrado = productos.find( item => item.nombre === nombre );
        return (
         <div className="container text-center">
