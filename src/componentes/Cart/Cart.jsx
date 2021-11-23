@@ -46,14 +46,12 @@ const Cart = () => {
 
                 <h1>TOTAL:{total()}</h1>
 
-                <h1>TOTAL:{cartList.reduce(function(valorAnterior,ValorActual){
-                    return ValorActual.quantity*ValorActual.item.precio
-                },0)}</h1>
+                
 
                 <button className="btn btn-warning botones" onClick={()=>vaciarCarrito()}>Vaciar Bolsita</button>
                  <button onClick={()=> crearOrdenDePedido(cartList)}>Terminar compra</button>  
         </div>
     );
-                };
+    };
 
 export default Cart
