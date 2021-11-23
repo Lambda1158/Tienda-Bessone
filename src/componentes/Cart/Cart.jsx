@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
     const {cartList, vaciarCarrito, removerItem, crearOrdenDePedido} = useCartContext()
     console.log(cartList);
+<<<<<<< HEAD
     function total(){
         var aux=0
         cartList.map(e=>{
@@ -12,6 +13,9 @@ const Cart = () => {
         })
         return aux
     }
+=======
+    
+>>>>>>> 19f499bd8f38e0a9cc23e38b05d9ae899d8acba6
     return (
         <div className="text-center">
         <h1>Carrito</h1>
@@ -39,7 +43,13 @@ const Cart = () => {
                     </tr>
                 </tbody>)}                
         </table>        
+<<<<<<< HEAD
                 <h1>TOTAL:{total()}</h1>
+=======
+                <h1>TOTAL:{cartList.reduce(function(valorAnterior,ValorActual){
+                    return ValorActual.quantity*ValorActual.item.precio
+                },0)}</h1>
+>>>>>>> 19f499bd8f38e0a9cc23e38b05d9ae899d8acba6
                 <button className="btn btn-warning botones" onClick={()=>vaciarCarrito()}>Vaciar Bolsita</button>
                  <button onClick={()=> crearOrdenDePedido(cartList)}>Terminar compra</button>  
         </div>
