@@ -5,7 +5,13 @@ import { Link } from 'react-router-dom'
 const Cart = () => {
     const {cartList, vaciarCarrito, removerItem, crearOrdenDePedido} = useCartContext()
     console.log(cartList);
-    
+    function total(){
+        var aux=0
+        cartList.map(e=>{
+            aux=aux+e.quantity*e.item.precio
+        })
+        return aux
+    }
     return (
         <div className="text-center">
         <h1>Carrito</h1>
@@ -33,9 +39,7 @@ const Cart = () => {
                     </tr>
                 </tbody>)}                
         </table>        
-                <h1>TOTAL:{cartList.map(item => {
-            precioTotal += item.item.price * item.quantity
-            return precioTotal})}</h1>
+                <h1>TOTAL:{total()}</h1>
                 <button className="btn btn-warning botones" onClick={()=>vaciarCarrito()}>Vaciar Bolsita</button>
                  <button onClick={()=> crearOrdenDePedido(cartList)}>Terminar compra</button>  
         </div>
